@@ -1,0 +1,77 @@
+/*****************************HTML TAG SELECTOR*****************************/
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0px;
+    text-align: center;
+}
+
+h1 {
+    color: #FFACB7;
+    font-family: 'Sacramento', cursive;
+    font-size: 5.625rem;
+    line-height: 2;
+    margin: 50px auto 0 auto;
+
+}
+
+h2 {
+    color: #FFACB7;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+h3 {
+    color: #6886C5;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+/*****************************CLASS SELECTOR*****************************/
+.top-container {
+    background-color: #6886C5;
+    position: relative;
+    padding-top: 100px;
+}
+
+.middle-container {
+    background-color: #F9F9F9;
+    padding-top: 20px;
+}
+
+.bottom-container {
+    background-color: #F9F9F9;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 300px;
+    bottom: 300px;
+}
+
+.footer-link {
+    color: #6886C5;
+    margin: auto 20px auto 20px;
+}
+
+
+.profile-pic {
+    height: 128px;
+
+}
+
+
+.top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 50px;
+}
+
+
+
+
+/*****************************ID SELECTOR*****************************/
+#self-taught {
+    text-decoration: underline;
+}
