@@ -1,13 +1,17 @@
 var audio = new Audio("sounds/tom-1.mp3");
 
 for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
+    // Scenario: Click
     document.querySelectorAll(".drum")[i].addEventListener("click", function () {        
         var buttonInnerHTML = this.innerHTML; //this returns the HTML of clicked button
         makeSound(buttonInnerHTML);
+        buttonAnimation(buttonInnerHTML);
     });
 
+    // Scenario: Keydown
     document.addEventListener("keydown", function (event) {
-        makeSound(event.key); //event.key is the key that is pressed
+        makeSound(event.key); //event.key is the button that is pressed
+        buttonAnimation(event.key);
     });
 }
 
@@ -45,4 +49,14 @@ function makeSound(key) {
             console.log(key);
             break;
     }
+}
+
+function buttonAnimation(currentKey) {
+    var activeButton = document.querySelector("." + currentKey);
+    activeButton.classList.add("pressed"); //Add the "pressed" style
+
+    //Return back to normal, by removing the "pressed" style after 0.1 sec
+    setTimeout(function () {
+        activeButton.classList.remove("pressed");
+    }, 100);
 }
